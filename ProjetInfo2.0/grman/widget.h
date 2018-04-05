@@ -1,14 +1,13 @@
 #ifndef WIDGET_H_INCLUDED
 #define WIDGET_H_INCLUDED
-
 #include "grman.h"
-
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
 
 #include <allegro.h>
+
 
 namespace grman
 {
@@ -184,6 +183,7 @@ class Widget
         bool is_gui_leave() {return this==gui_leave;}
 
         bool is_mouse_over();
+        //bool clicked() { bool clk = m_value; m_value=false; return clk; }
 
         /// Les accesseurs de "styles" sont à compléter...
         void set_bg_color(int bgc) { m_bg_color = bgc; }
@@ -356,6 +356,9 @@ class WidgetBox : public Widget
         // La WidgetBox reste dans le cadre de son parent (préférable)
         bool m_contained = true;
 
+        ///clicked or not
+        bool m_value = false;
+
         // Position au moment du click quand on commence à bouger la WidgetBox
         Coords m_pos_start_move;
 
@@ -364,7 +367,11 @@ class WidgetBox : public Widget
 
         virtual void interact_focus();
         virtual bool captures_focus() { return true; }
+
         void set_moveable(bool moveable=true) { m_moveable = moveable; }
+        bool clicked() { bool clk = m_value; m_value=false; return clk; }
+        bool get_value() { return m_value; }
+        void set_value(bool value) { m_value = value; }
 };
 
 

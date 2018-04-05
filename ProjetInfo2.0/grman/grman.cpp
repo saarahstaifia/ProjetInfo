@@ -6,7 +6,6 @@
 #include <iostream>
 #include <regex>
 
-
 #include "grman.h"
 #include <allegro.h>
 #include <png.h>
@@ -23,7 +22,7 @@ namespace grman
 
 // Nombre de pixels horizontalement et verticalement
 #define LARGEURECRAN 1024
-#define HAUTEURECRAN 768
+#define HAUTEURECRAN 578
 
 // Couleur initiale :
 #define PAGE_COULEUR_INIT BLANC
@@ -229,6 +228,7 @@ void rafraichir_clavier_souris()
     mouse_now = mouse_b;
     mouse_click = mouse_now & ~mouse_prev;
     mouse_unclick = ~mouse_now & mouse_prev;
+
 
     mouse_pos = Coords(mouse_x, mouse_y);
 

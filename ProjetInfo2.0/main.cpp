@@ -1,10 +1,13 @@
 #include "grman/grman.h"
+#include "grman/widget.h"
 #include <iostream>
 
 #include "graph.h"
 
-#define SCREEN_W 1024
-#define SCREEN_H 768
+
+
+
+
 
 int main()
 {
@@ -16,8 +19,15 @@ int main()
 
     /// Un exemple de graphe
     Graph g;
+
+
+
     //g.make_example();
-    g.loadFile("load1");
+    g.loadFile("fichiergraphe2");
+
+
+
+
 
 
     /// Vous gardez la main sur la "boucle de jeu"
@@ -29,8 +39,11 @@ int main()
 
         /// Mise à jour générale (clavier/souris/buffer etc...)
         grman::mettre_a_jour();
+        g.animations();
 
-        if(key[KEY_S]) g.saveFile("save1.txt");
+
+
+
 
     }
 

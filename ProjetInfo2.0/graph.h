@@ -268,6 +268,27 @@ class GraphInterface
         /// Dans cette boite seront ajoutés des boutons de contrôle etc...
         grman::WidgetBox m_tool_box;
 
+        ///Boutons Actifs   Yes/No
+        grman::WidgetCheckBox m_checkbox;
+
+        ///Boutons Activation
+        grman::WidgetButton m_button1;
+        grman::WidgetButton m_button2;
+        grman::WidgetButton m_button3;
+        grman::WidgetButton m_button4;
+        grman::WidgetButton m_button5;
+
+        ///Textes
+        grman::WidgetText m_text1;
+        grman::WidgetText m_text2;
+        grman::WidgetText m_text3;
+        grman::WidgetText m_text4;
+
+        ///Images
+        grman::WidgetImage m_img_save;
+
+
+
 
         // A compléter éventuellement par des widgets de décoration ou
         // d'édition (boutons ajouter/enlever ...)
@@ -312,14 +333,24 @@ class Graph
 
 
 
-        ///!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 
         ///AJOUT d'un nouveau sommet au vecteur --> 03/04 :: id, value, x, y, img.txt
         void loadFile(std::string FileName);
         void saveFile(std::string FileNameSave);
         void ajoutSommet(int id, float value,int x,int y,std::string content);
+        void test_remove_edge(int eidx);
+        void remove_vertex(int vidx);
+        void add_vertex();
+        void add_edge(int from, int to);
+        void effacer();
+        void animations();
+        void BoxFix();
 
-        void make_example();
+        ///retour de l'index du sommet
+        int ReturnIdx();
+
+
 
 
         /// La méthode update à appeler dans la boucle de jeu pour les graphes avec interface

@@ -1,9 +1,9 @@
 #include "widget.h"
 
 
+
 namespace grman
 {
-
 void rect_around(BITMAP *bmp, int color, int thickness=1, int receding=0)
 {
     for (int i=0+receding; i<thickness+receding; ++i)
@@ -26,6 +26,7 @@ void Widget::update()
 /// Gestion des événements
 void Widget::update_interact()
 {
+
     create_frame_context();
 
     /// Propagation de l'update aux elements enfants
@@ -180,10 +181,10 @@ void WidgetText::set_message(std::string message)
 
 
 
+
 /***************************************************
                     CHECKBOX
 ****************************************************/
-
 void WidgetCheckBox::draw()
 {
     if (m_value)
@@ -284,6 +285,7 @@ void WidgetImage::reframe()
 
 void WidgetImage::draw()
 {
+
     if (m_animate)
     {
 
@@ -304,21 +306,30 @@ void WidgetImage::draw()
 
 void WidgetBox::interact_focus()
 {
-    if (mouse_click)
+
+
+        if (mouse_click)
     {
         m_pos_start_move = m_frame.pos;
-        std::cout<<"1"<<std::endl;
     }
+
 
     if (m_moveable)
     {
-        std::cout<<"2"<<std::endl;
+
         m_frame.pos.x = m_pos_start_move.x + mouse_x-mouse_click_x;
         m_frame.pos.y = m_pos_start_move.y + mouse_y-mouse_click_y;
 
         if (m_contained)
         {
-            std::cout<<"3"<<std::endl;
+
+            ///c///////////////////////////////////////////////:
+
+               /// m_value = true;
+
+            ///c//////////////////////////////////////////////////
+
+
             if ( m_frame.dim.x+2*m_margin+2*get_parent_bp() <= get_parent_frame().dim.x )
             {
                 if ( get_posx() < m_margin )
@@ -336,6 +347,7 @@ void WidgetBox::interact_focus()
             }
         }
     }
+
 
 }
 

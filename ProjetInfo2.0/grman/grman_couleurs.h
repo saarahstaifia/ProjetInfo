@@ -1,11 +1,15 @@
 #ifndef COULEURS_H_INCLUDED
 #define COULEURS_H_INCLUDED
 
+
+
 namespace grman
 {
 
 /// Les couleurs proposées. Il est possible d'en ajouter en respectant la syntaxe.
 /// Faire une recherche "couleur html" dans google image pour d'autres valeurs.
+
+
 
 #define NOIR 0x000000
 
