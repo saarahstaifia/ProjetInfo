@@ -320,12 +320,16 @@ class Graph
         ///Nombre d'arretes d'un graphe
         int m_nbArete;
 
+        bool m_saved1;
+        bool m_saved2;
+        bool m_saved3;
+
     public:
 
         /// Les constructeurs sont à compléter selon vos besoin...
         /// Ici on ne donne qu'un seul constructeur qui peut utiliser une interface
-        Graph (GraphInterface *interface=nullptr, int ordre = 0, int nbArete = 0) :
-            m_interface(interface),m_ordre(ordre), m_nbArete(nbArete)  {  }
+        Graph (GraphInterface *interface=nullptr, int ordre = 0, int nbArete = 0, bool saved1=false, bool saved2=false, bool saved3=false) :
+            m_interface(interface),m_ordre(ordre), m_nbArete(nbArete),m_saved1(saved1),m_saved2(saved2),m_saved3(saved3) {  }
 
 
         void add_interfaced_vertex(int idx, double value, int x, int y, std::string pic_name="", int pic_idx=0 );
@@ -344,11 +348,15 @@ class Graph
         void add_vertex();
         void add_edge(int from, int to);
         void effacer();
-        void animations();
+        void animations(int * currentgraph);
         void BoxFix();
+        void DynamiqueEvolution();
 
         ///retour de l'index du sommet
         int ReturnIdx();
+
+        int Menu();
+        void reset();
 
 
 

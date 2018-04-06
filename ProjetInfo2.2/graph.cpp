@@ -2,6 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include "grman/widget.h"
+#include "allegro.h"
 
 
 /***************************************************
@@ -261,6 +262,9 @@ void Graph::loadFile(std::string fileName)
     int numS, x, y;
     double valeur;
     std::string pic_name;
+    if(fileName+".txt"=="fichiergraphe1.txt" && m_saved1==true) fileName="save1";
+    if(fileName+".txt"=="fichiergraphe2.txt" && m_saved2==true) fileName="save2";
+    if(fileName+".txt"=="fichiergraphe3.txt" && m_saved3==true) fileName="save3";
     ///lecture du fichier
     std::ifstream fichier(fileName+".txt",std::ios::in);
     if(fichier)
@@ -275,12 +279,14 @@ void Graph::loadFile(std::string fileName)
         for(int i=0; i<m_ordre; i++)
         {
             fichier>>numS>>valeur>>x>>y>>pic_name;
-            //getline(fichier,nom);
-
             add_interfaced_vertex(numS,valeur,x,y,pic_name);
         }
+        std::cout<<numS;
+        if( fileName=="save1" && m_saved1) m_ordre=numS+1;
+        if( fileName=="save2" && m_saved2) m_ordre=numS+1;
+        if( fileName=="save3" && m_saved3) m_ordre=numS+1;
+
         fichier>>m_nbArete;
-        std::cout<<m_nbArete;
         getline(fichier,nom);
         ///Adjacences
         for(int i=0; i<m_nbArete; i++)
@@ -289,6 +295,9 @@ void Graph::loadFile(std::string fileName)
 
             add_interfaced_edge(numS,x,y,valeur);
         }
+        if( fileName=="save1" && m_saved1) m_nbArete=numS+1;
+        if( fileName=="save2" && m_saved2) m_nbArete=numS+1;
+        if( fileName=="save3" && m_saved3) m_nbArete=numS+1;
 
         fichier.close();
     }
@@ -308,6 +317,9 @@ void Graph::saveFile(std::string fileNameSave)
     std::ofstream fichier(fileNameSave, std::ios::out);  // ouverture en écriture avec
     if (fichier)
     {
+        if(fileNameSave=="save1.txt") m_saved1 = true;
+        if(fileNameSave=="save2.txt") m_saved1 = true;
+        if(fileNameSave=="save3.txt") m_saved1 = true;
         int cpt=0;
         for (auto it = m_vertices.begin(); it!=m_vertices.end(); ++it)
         {
@@ -531,8 +543,6 @@ int Graph::ReturnIdx()
                   /// std::cout<< it->first<<"--"<<m_vertices[it->first].m_interface->m_top_box.get_posx()<<"--"<<m_vertices[it->first].m_interface->m_top_box.get_posy()<<"\n";
                     return (it->first);
                     TuttoBene = 0;
-
-
                }
         }
         }
@@ -541,10 +551,18 @@ if(TuttoBene = -1)
 }
 
 
-void Graph::animations()
+void Graph::animations(int*currentgraph)
 {
 ///Sauvegarde
-    if (m_interface->m_button1.clicked()) saveFile("save1.txt") ;
+    if (m_interface->m_button1.clicked())
+    {
+        if (*currentgraph==1) saveFile("save1.txt") ;
+        if (*currentgraph==2) saveFile("save2.txt") ;
+        if (*currentgraph==3) saveFile("save3.txt") ;
+    }
+
+
+
 
     ///Suppresion Sommet
     if (m_interface->m_button2.clicked())
@@ -651,4 +669,39 @@ void Graph::animations()
 
           }
     }
+    }
+
+    int Graph::Menu()
+    {
+        if(key[KEY_I])
+    {
+        return(1);
+
+    }
+    else if(key[KEY_O])
+    {
+        return(2);
+
+    }
+    else if(key[KEY_P])
+    {
+        return(3);
+
+    }
+    else
+    {
+        return(0);
+    }
+    }
+
+    void Graph::reset()
+    {
+        m_vertices.clear();
+        m_edges.clear();
+        clear_to_color(screen,makecol(255,255,255));
+
+    }
+    void Graph::DynamiqueEvolution()
+    {
+        std::cout<<"Tic\n";
     }

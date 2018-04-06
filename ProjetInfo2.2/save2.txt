@@ -1,0 +1,23 @@
+9
+0 10 465 422 vegetal.jpg
+1 12 176 364 fourmi.jpg
+2 25 711 404 baboin.jpg
+3 50 729 226 phacochere.jpg
+4 82.8571 3 450 gnou.jpg
+5 41.4286 461 253 gazelle.jpg
+6 70 243 42 lion.jpg
+7 66 662 32 leopard.jpg
+8 64 447 26 guepard.jpg
+12
+0 0 1 5
+1 0 2 9
+2 0 4 15
+3 0 3 13
+4 0 5 11
+5 4 6 40
+6 4 7 37
+7 3 6 32
+8 3 8 0
+9 5 6 29
+10 5 7 34
+11 3 7 47
