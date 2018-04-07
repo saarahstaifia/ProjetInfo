@@ -1,16 +1,16 @@
 6
 
-0 2 464 367 0.006 krill.jpg
+0 2 464 367 1 krill.jpg
 
-1 5 464 187 0.001 poisson.jpg
+1 5 464 187 20 poisson.jpg
 
-2 30 686 191 0.00052 morse.jpg
+2 30 686 191 480 morse.jpg
 
-3 28 153 190 0.000724 phoque.jpg
+3 28 153 190 276 phoque.jpg
 
-4 17 305 23 0.00095 renardarctique.jpg
+4 17 305 23 68 renardarctique.jpg
 
-5 50 599 25 0.00076 oursblanc.jpg
+5 50 599 25 240 oursblanc.jpg
 
 5
 

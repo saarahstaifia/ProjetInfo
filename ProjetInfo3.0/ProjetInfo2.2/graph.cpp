@@ -720,6 +720,7 @@ void Graph::animations(int*currentgraph)
 
          for (auto it = m_vertices.begin(); it!=m_vertices.end(); ++it)
         {
+            std::cout<<"\n";
             K = 0;
             soustraction = 0;
 
@@ -731,27 +732,34 @@ void Graph::animations(int*currentgraph)
     {
 
 
-        K += ((m_edges[supr.m_in[i]].m_weight)/2500) * m_vertices[m_edges[supr.m_in[i]].m_from].m_interface->m_slider_value.get_value();
+        K += ((m_edges[supr.m_in[i]].m_weight)*0.06) * m_vertices[m_edges[supr.m_in[i]].m_from].m_interface->m_slider_value.get_value();
 
 
        ///--> la partie négative de l'équation de croissance += le poids de l'arete entrante /2500 (coef approximatif pour temporiser la croissance) * la pop du "mangeur"
     }
-    if(m_vertices[it->first].m_interface->m_top_box.get_Coef()==0.006)K=60;
+
+    if(m_vertices[it->first].m_interface->m_top_box.get_Coef()==1)K=70;
+    std::cout<<K;
 
 
 
     for(int i =supr.m_out.size() -1 ; i >=0  ; i--)
       {
-          soustraction += ((m_edges[supr.m_out[i]].m_weight)/2500) * m_vertices[m_edges[supr.m_out[i]].m_from].m_interface->m_slider_value.get_value();
-          ///Same as before mais en +
+          soustraction += ((m_edges[supr.m_out[i]].m_weight)*0.0006) * m_vertices[m_edges[supr.m_out[i]].m_from].m_interface->m_slider_value.get_value();
+
       }
+      std::cout<<"---"<<soustraction<<"\n";   ///Same as before mais en +
 
       /// ON APPLIQUE LA FORMULE
-      double Set_Value = (m_vertices[it->first].m_interface->m_slider_value.get_value() + (m_vertices[it->first].m_interface->m_top_box.get_Coef())*(m_vertices[it->first].m_interface->m_slider_value.get_value())*(1-(m_vertices[it->first].m_interface->m_slider_value.get_value())/(10000000*K)) - soustraction);
+      float Set_Value = (m_vertices[it->first].m_interface->m_slider_value.get_value() + ((1/((m_vertices[it->first].m_interface->m_top_box.get_Coef())))*(m_vertices[it->first].m_interface->m_slider_value.get_value()))*(1-(m_vertices[it->first].m_interface->m_slider_value.get_value())/(K)) - soustraction);
       ///ON MET A JOUR L'AFFICHAGE
+      if (soustraction == 0) Set_Value = Set_Value;
+      std::cout<<m_vertices[it->first].m_interface->m_slider_value.get_value();
+
+      int test = Set_Value;
       //m_vertices[it->first].m_interface->m_slider_value.set_value(Set_Value);
-      m_vertices[it->first].m_value = Set_Value;
-      std::cout<<"OK";
+      m_vertices[it->first].m_value = test;
+
 
 
     }
