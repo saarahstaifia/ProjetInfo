@@ -450,7 +450,7 @@ void Graph::test_remove_edge(int eidx)
 Edge &remed=m_edges.at(eidx);
 
 
-std::cout << "Removing edge " << eidx << " " << remed.m_from << "->" << remed.m_to << " " << remed.m_weight << std::endl;
+//std::cout << "Removing edge " << eidx << " " << remed.m_from << "->" << remed.m_to << " " << remed.m_weight << std::endl;
 
 /*/// Tester la cohérence : nombre d'arc entrants et sortants des sommets 1 et 2
 std::cout << m_vertices[remed.m_from].m_in.size() << " " << m_vertices[remed.m_from].m_out.size() << std::endl;
@@ -607,7 +607,7 @@ void Graph::animations(int*currentgraph)
         {
         ok = true;
         add_edge(Idx,Idx2);
-        std::cout<<Idx<<Idx2;
+
         }
         if(mouse_b&2) ok = true;
 
@@ -632,7 +632,7 @@ void Graph::animations(int*currentgraph)
         int Idx2 = ReturnIdx();
         if (Idx != -1 && Idx2 != -1  && Idx!=Idx2)
         {
-            std::cout<<"Hey";
+
     int Idexe;
     int From;
     int To;
@@ -659,7 +659,7 @@ void Graph::animations(int*currentgraph)
         // m_vertices[Idx].m_out[Idx2]
         ok = true;
         test_remove_edge(IdxAreteToDelete);
-        std::cout<<Idx<<Idx2;
+
         }
         }
         if(mouse_b&2) ok = true;
@@ -720,7 +720,7 @@ void Graph::animations(int*currentgraph)
 
          for (auto it = m_vertices.begin(); it!=m_vertices.end(); ++it)
         {
-            std::cout<<"\n";
+
             K = 0;
             soustraction = 0;
 
@@ -739,7 +739,7 @@ void Graph::animations(int*currentgraph)
     }
 
     if(m_vertices[it->first].m_interface->m_top_box.get_Coef()==1)K=70;
-    std::cout<<K;
+
 
 
 
@@ -748,13 +748,14 @@ void Graph::animations(int*currentgraph)
           soustraction += ((m_edges[supr.m_out[i]].m_weight)*0.0006) * m_vertices[m_edges[supr.m_out[i]].m_from].m_interface->m_slider_value.get_value();
 
       }
-      std::cout<<"---"<<soustraction<<"\n";   ///Same as before mais en +
+
 
       /// ON APPLIQUE LA FORMULE
       float Set_Value = (m_vertices[it->first].m_interface->m_slider_value.get_value() + ((1/((m_vertices[it->first].m_interface->m_top_box.get_Coef())))*(m_vertices[it->first].m_interface->m_slider_value.get_value()))*(1-(m_vertices[it->first].m_interface->m_slider_value.get_value())/(K)) - soustraction);
       ///ON MET A JOUR L'AFFICHAGE
-      if (soustraction == 0) Set_Value = Set_Value;
-      std::cout<<m_vertices[it->first].m_interface->m_slider_value.get_value();
+      if (soustraction == 0) Set_Value = 1.02*Set_Value;
+
+
 
       int test = Set_Value;
       //m_vertices[it->first].m_interface->m_slider_value.set_value(Set_Value);

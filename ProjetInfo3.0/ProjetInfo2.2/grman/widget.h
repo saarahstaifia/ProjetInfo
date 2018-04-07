@@ -308,7 +308,7 @@ class WidgetVSlider : public Widget
         double get_value() { return typed(m_value); }
         void limit_to_range() { if (m_value<m_min) m_value=m_min; if (m_value>m_max) m_value=m_max; }
         void set_value(double value) { m_value = value; m_value =get_value(); limit_to_range(); }
-        void set_range(double min, double max, bool integer=false) { m_min = min; m_max = max; m_integer = integer; limit_to_range(); }
+        void set_range(double min, double max, bool integer=true) { m_min = min; m_max = max; m_integer = integer; limit_to_range(); }
 };
 
 
