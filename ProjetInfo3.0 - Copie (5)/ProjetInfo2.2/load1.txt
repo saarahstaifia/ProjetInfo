@@ -1,0 +1,24 @@
+6
+
+0 2.0 20 45 krill.jpg
+
+1 5.0 70 100 poisson.jpg
+
+2 30.0 150 80 morse.jpg
+
+3 28.0 70 175 phoque.jpg
+4 7.0 300 500 renardarctique.jpg
+
+5 50.0 600 600 oursblanc.jpg
+
+5
+
+0 0 1 5.0
+
+1 1 2 10.0
+
+2 1 3 8.0
+
+3 3 5 30.0
+
+20.0

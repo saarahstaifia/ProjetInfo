@@ -1,0 +1,183 @@
+# depslib dependency file v1.0
+1522951337 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\graph.cpp
+	"graph.h"
+	<fstream>
+	<sstream>
+	"grman/widget.h"
+
+1522948953 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\graph.h
+	"cstdlib"
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+
+1522539041 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522932235 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\grman_couleurs.h
+
+1522575424 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\coords.h
+	<cmath>
+
+1522932438 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522575069 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\coords.cpp
+	"coords.h"
+
+1522933260 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522934225 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\grman\widget.cpp
+	"widget.h"
+
+1522882052 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo2.0\main.cpp
+	"grman/grman.h"
+	"grman/widget.h"
+	<iostream>
+	"graph.h"
+
+1523016627 source:c:\users\cleme\projetinfo\projetinfo2.0\graph.cpp
+	"graph.h"
+	<fstream>
+	<sstream>
+	"grman/widget.h"
+
+1523018222 c:\users\cleme\projetinfo\projetinfo2.0\graph.h
+	"cstdlib"
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+
+1522539041 c:\users\cleme\projetinfo\projetinfo2.0\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522932235 c:\users\cleme\projetinfo\projetinfo2.0\grman\grman_couleurs.h
+
+1522575424 c:\users\cleme\projetinfo\projetinfo2.0\grman\coords.h
+	<cmath>
+
+1522932438 c:\users\cleme\projetinfo\projetinfo2.0\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522575069 source:c:\users\cleme\projetinfo\projetinfo2.0\grman\coords.cpp
+	"coords.h"
+
+1522933260 source:c:\users\cleme\projetinfo\projetinfo2.0\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522934225 source:c:\users\cleme\projetinfo\projetinfo2.0\grman\widget.cpp
+	"widget.h"
+
+1522882052 source:c:\users\cleme\projetinfo\projetinfo2.0\main.cpp
+	"grman/grman.h"
+	"grman/widget.h"
+	<iostream>
+	"graph.h"
+
+1522986648 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\coords.cpp
+	"coords.h"
+
+1522986648 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\coords.h
+	<cmath>
+
+1522986648 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\grman.cpp
+	<cmath>
+	<unordered_map>
+	<unordered_set>
+	<utility>
+	<string>
+	<iostream>
+	<regex>
+	"grman.h"
+	<allegro.h>
+	<png.h>
+	<loadpng.h>
+	<jpgalleg.h>
+
+1522986648 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\grman.h
+	<allegro.h>
+	<string>
+	"grman_couleurs.h"
+	"coords.h"
+	"widget.h"
+
+1522986648 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\grman_couleurs.h
+
+1523153538 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\widget.h
+	"grman.h"
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	<allegro.h>
+
+1522986648 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\grman\widget.cpp
+	"widget.h"
+
+1523039653 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\main.cpp
+	"grman/grman.h"
+	"grman/widget.h"
+	<iostream>
+	"graph.h"
+
+1523150208 c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\graph.h
+	"cstdlib"
+	<vector>
+	<map>
+	<string>
+	<memory>
+	"grman/grman.h"
+
+1523158204 source:c:\users\cleme\desktop\projetinfo_théoriedesgraphes\projetinfo3.0\projetinfo2.2\graph.cpp
+	"graph.h"
+	<fstream>
+	<sstream>
+	"grman/widget.h"
+	"allegro.h"
+	"time.h"
+
